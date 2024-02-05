@@ -45,17 +45,26 @@ namespace BucketNetting.Tests
                     {
                         Id = "Future1", Class = Class.Future, MarketValue = 20000, MaturityDate = new DateTime(2028, 12, 30)
                     },
-
+                    new Asset
+                    {
+                        Id = "Future1", Class = Class.Future, MarketValue = 10000, MaturityDate = new DateTime(2024, 12, 30)
+                    },
+                    new()
+                    {
+                        Id = "Future1", Class = Class.Future, MarketValue = 10000, MaturityDate = new DateTime(2024, 12, 30)
+                    },
                 }
             };
             // Act
 
             var result = _sut.Allocate(data);
-            var calculation = _sut.GetMarketValue(result);
+            _sut.GetMarketValue(result);
 
             // Assert
+            result[0].Assets.Count.Should().Be(2);
+            result[0].Exposure.Should().Be(20000);
             result[1].Assets.Count.Should().Be(2);
-            calculation.Should().Be(40000);
+            result[1].Exposure.Should().Be(40000);
         }
     }
 }

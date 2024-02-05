@@ -37,6 +37,9 @@ namespace BucketNetting.Services
                 if (asset.Class is Class.Future)
                 {
                     var maturity = (asset.MaturityDate - portfolio.DataDate).TotalDays;
+                    if (maturity < 0)
+                        continue;
+
                     var totalDays = maturity + maturity / (365 * 4);
 
                     switch (totalDays)
@@ -60,9 +63,12 @@ namespace BucketNetting.Services
             return buckets;
         }
 
-        public decimal GetMarketValue(List<Bucket> buckets)
+        public void GetMarketValue(List<Bucket> buckets)
         {
-            return buckets.SelectMany(x => x.Assets).Sum(y => y.MarketValue);
+            foreach (var bucket in buckets)
+            {
+                bucket.Exposure = bucket.Assets.Sum(x => x.MarketValue);
+            }
         }
     }
 }

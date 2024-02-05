@@ -6,6 +6,6 @@ namespace BucketNetting.Services
     public interface IAllocateToBucketService
     {
         List<Bucket> Allocate(Portfolio portfolio);
-        decimal GetMarketValue(List<Bucket> buckets);
+        void GetMarketValue(List<Bucket> buckets);
     }
 }

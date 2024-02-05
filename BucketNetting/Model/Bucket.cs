@@ -6,5 +6,6 @@ namespace BucketNetting.Model
     {
         public int Id { get; set; }
         public List<Asset> Assets { get; set; }
+        public decimal Exposure { get; set; }
     }
 }

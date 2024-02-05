@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BucketNetting", "BucketNetting\BucketNetting.csproj", "{CE9A6345-6272-48A4-869C-B376856F909A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BucketNetting.Tests", "BucketNetting.Tests\BucketNetting.Tests.csproj", "{C99064F8-21FE-4537-837F-C8E20441B036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE9A6345-6272-48A4-869C-B376856F909A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9A6345-6272-48A4-869C-B376856F909A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9A6345-6272-48A4-869C-B376856F909A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9A6345-6272-48A4-869C-B376856F909A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C99064F8-21FE-4537-837F-C8E20441B036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99064F8-21FE-4537-837F-C8E20441B036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99064F8-21FE-4537-837F-C8E20441B036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99064F8-21FE-4537-837F-C8E20441B036}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F231ADCA-1B2E-4965-B6C4-77554B3AAE44}
+	EndGlobalSection
+EndGlobal
